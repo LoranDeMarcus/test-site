@@ -9,10 +9,25 @@ const Header = () => {
     <s.Header>
       <Container>
         <s.Inner>
-          <s.LogoWrapper>
-            <img src={logo} alt='logo' />
-          </s.LogoWrapper>
-          123
+          <img src={logo} alt='logo' className={s.Image} />
+          <s.Navbar>
+            <s.NavList>
+              <s.NavItem_Active>
+                Главная
+              </s.NavItem_Active>
+              <s.NavItem>
+                Тестирование
+              </s.NavItem>
+            </s.NavList>
+            <s.ButtonsWrapper>
+              <button className={s.Login}>
+                Войти
+              </button>
+              <button className={s.SignUp}>
+                Зарегистрироваться
+              </button>
+            </s.ButtonsWrapper>
+          </s.Navbar>
         </s.Inner>
       </Container>
     </s.Header>

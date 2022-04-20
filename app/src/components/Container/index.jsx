@@ -3,9 +3,9 @@ import * as s from './styles'
 
 const Container = ({ children }) => {
   return (
-    <s.Wrapper>
+    <s.ContainerWrapper>
       {children}
-    </s.Wrapper>
+    </s.ContainerWrapper>
   )
 }
 
