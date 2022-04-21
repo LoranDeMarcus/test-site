@@ -10,16 +10,16 @@ export const Tittle = styled.h1`
 `
 
 export const form = css`
-  margin-top: 30px;
+  margin: 30px 0 100px;
+
+  & > button {
+    margin-top: 40px;
+  }
 `
 
 export const QuestionWrapper = styled.div`
   padding: 30px 0;
   border-bottom: 1px solid #e6e6e6;
-  
-  &:last-child {
-    margin-bottom: 40px;
-  }
 `
 
 export const Question = styled.p`

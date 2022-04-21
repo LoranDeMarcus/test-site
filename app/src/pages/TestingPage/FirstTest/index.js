@@ -6,9 +6,12 @@ import Header from '../../../components/Header'
 
 import { Wrapper } from '../styles'
 import * as s from './styles'
+import { Radio, RadioGroup } from '../../../components/Radio'
 
 export const FirstTest = () => {
   const { control, handleSubmit, formState:{ errors } } = useForm()
+
+  console.log(errors)
 
   const onSubmit = (data) => {
     console.log(data)
@@ -35,30 +38,34 @@ export const FirstTest = () => {
                   render={({ field: { onChange, value } }) => (
                     <>
                       <s.AnswerWrapper>
-                        <s.Input type='radio' name='first' value='a' id='first_a' />
-                        <s.Label htmlFor='first_a'>
-                          <b>a)</b> такая ошибка всегда приводит к автоматическому переходу на официальный
-                          сайт той страны, в которой находится пользователь
-                        </s.Label>
+                        <RadioGroup value={value} onChange={onChange}>
+                          <Radio value='a' id='1_a'>
+                            <b>a)</b> такая ошибка всегда приводит к автоматическому переходу на официальный
+                            сайт той страны, в которой находится пользователь
+                          </Radio>
+                        </RadioGroup>
                       </s.AnswerWrapper>
                       <s.AnswerWrapper>
-                        <s.Input type='radio' name='first' value='b' id='first_b' />
-                        <s.Label htmlFor='first_b'>
-                          <b>b)</b> может быть осуществлен переход на мошеннический сайт для кражи учетных
-                          данных пользователей, который очень похож на тот, на который был запланирован переход
-                        </s.Label>
+                        <RadioGroup value={value} onChange={onChange}>
+                          <Radio value='b' id='1_b'>
+                            <b>b)</b> может быть осуществлен переход на мошеннический сайт для кражи учетных
+                            данных пользователей, который очень похож на тот, на который был запланирован переход
+                          </Radio>
+                        </RadioGroup>
                       </s.AnswerWrapper>
                       <s.AnswerWrapper>
-                        <s.Input type='radio' name='first' value='c' id='first_c' />
-                        <s.Label htmlFor='first_c'>
-                          <b>c)</b> система автоматически исправит ошибку, в любом случае пользователь попадет на нужный сайт
-                        </s.Label>
+                        <RadioGroup value={value} onChange={onChange}>
+                          <Radio value='c' id='1_c'>
+                            <b>c)</b> система автоматически исправит ошибку, в любом случае пользователь попадет на нужный сайт
+                          </Radio>
+                        </RadioGroup>
                       </s.AnswerWrapper>
                       <s.AnswerWrapper>
-                        <s.Input type='radio' name='first' value='d' id='first_d' />
-                        <s.Label htmlFor='first_d'>
-                          <b>d)</b> такая ошибка всегда приводит к тому, что не будет осуществлен переход ни на какой сайт
-                        </s.Label>
+                        <RadioGroup value={value} onChange={onChange}>
+                          <Radio value='d' id='1_d'>
+                            <b>d)</b> такая ошибка всегда приводит к тому, что не будет осуществлен переход ни на какой сайт
+                          </Radio>
+                        </RadioGroup>
                       </s.AnswerWrapper>
                     </>
                   )}
@@ -77,26 +84,26 @@ export const FirstTest = () => {
                   render={({ field: { onChange, value } }) => (
                     <>
                       <s.AnswerWrapper>
-                        <s.Input type='checkbox' name='second' value='a' id='second_a' />
-                        <s.Label htmlFor='second_a'>
+                        <s.Input type='checkbox' name='2' value='a' id='2_a' />
+                        <s.Label htmlFor='2_a'>
                           <b>a)</b> после подключения мыши от зараженного компьютера к незараженному
                         </s.Label>
                       </s.AnswerWrapper>
                       <s.AnswerWrapper>
-                        <s.Input type='checkbox' name='second' value='b' id='second_b' />
-                        <s.Label htmlFor='second_b'>
+                        <s.Input type='checkbox' name='2' value='b' id='2_b' />
+                        <s.Label htmlFor='2_b'>
                           <b>b)</b> через зараженный флэш-диск
                         </s.Label>
                       </s.AnswerWrapper>
                       <s.AnswerWrapper>
-                        <s.Input type='checkbox' name='second' value='c' id='second_c' />
-                        <s.Label htmlFor='second_c'>
+                        <s.Input type='checkbox' name='2' value='c' id='2_c' />
+                        <s.Label htmlFor='2_c'>
                           <b>c)</b> через мошеннический сайт
                         </s.Label>
                       </s.AnswerWrapper>
                       <s.AnswerWrapper>
-                        <s.Input type='checkbox' name='second' value='d' id='second_d' />
-                        <s.Label htmlFor='second_d'>
+                        <s.Input type='checkbox' name='2' value='d' id='2_d' />
+                        <s.Label htmlFor='2_d'>
                           <b>d)</b> через сообщение в системе обмена сообщениями
                         </s.Label>
                       </s.AnswerWrapper>
@@ -117,20 +124,20 @@ export const FirstTest = () => {
                   render={({ field: { onChange, value } }) => (
                     <>
                       <s.AnswerWrapper>
-                        <s.Input type='checkbox' name='third' value='a' id='third_a' />
-                        <s.Label htmlFor='third_a'>
+                        <s.Input type='checkbox' name='3' value='a' id='3_a' />
+                        <s.Label htmlFor='3_a'>
                           <b>a)</b> они могут передавать злоумышленникам конфиденциальные сведения
                         </s.Label>
                       </s.AnswerWrapper>
                       <s.AnswerWrapper>
-                        <s.Input type='checkbox' name='third' value='b' id='third_b' />
-                        <s.Label htmlFor='third_b'>
+                        <s.Input type='checkbox' name='3' value='b' id='3_b' />
+                        <s.Label htmlFor='3_b'>
                           <b>b)</b> они могут нарушать работу компьютеров
                         </s.Label>
                       </s.AnswerWrapper>
                       <s.AnswerWrapper>
-                        <s.Input type='checkbox' name='third' value='c' id='third_c' />
-                        <s.Label htmlFor='third_c'>
+                        <s.Input type='checkbox' name='3' value='c' id='3_c' />
+                        <s.Label htmlFor='3_c'>
                           <b>c)</b> они могут поддерживать осмысленный диалог по электронной почте,
                           неотличимый от диалога с реальным собеседником, обманом узнавая у пользователя конфиденциальные сведения
                         </s.Label>
@@ -152,30 +159,34 @@ export const FirstTest = () => {
                   render={({ field: { onChange, value } }) => (
                     <>
                       <s.AnswerWrapper>
-                        <s.Input type='radio' name='4' value='a' id='4_a' />
-                        <s.Label htmlFor='4_a'>
-                          <b>a)</b> риск заключается в том, что со счета телефона может быть снята
-                          гораздо большая сумма, нежели указано на сайте
-                        </s.Label>
+                        <RadioGroup value={value} onChange={onChange}>
+                          <Radio value='a' id='4_a'>
+                            <b>a)</b> риск заключается в том, что со счета телефона может быть снята
+                            гораздо большая сумма, нежели указано на сайте
+                          </Radio>
+                        </RadioGroup>
                       </s.AnswerWrapper>
                       <s.AnswerWrapper>
-                        <s.Input type='radio' name='4' value='b' id='4_b' />
-                        <s.Label htmlFor='4_b'>
-                          <b>b)</b> риск заключается в том, что после отправки такого сообщения
-                          вам могут заблокировать доступ в Интернет
-                        </s.Label>
+                        <RadioGroup value={value} onChange={onChange}>
+                          <Radio value='b' id='4_b'>
+                            <b>b)</b> риск заключается в том, что после отправки такого сообщения
+                            вам могут заблокировать доступ в Интернет
+                          </Radio>
+                        </RadioGroup>
                       </s.AnswerWrapper>
                       <s.AnswerWrapper>
-                        <s.Input type='radio' name='4' value='c' id='4_c' />
-                        <s.Label htmlFor='4_c'>
-                          <b>c)</b> риск заключается в возможности кражи вашего номера телефона злоумышленниками
-                        </s.Label>
+                        <RadioGroup value={value} onChange={onChange}>
+                          <Radio value='c' id='4_c'>
+                            <b>c)</b> риск заключается в возможности кражи вашего номера телефона злоумышленниками
+                          </Radio>
+                        </RadioGroup>
                       </s.AnswerWrapper>
                       <s.AnswerWrapper>
-                        <s.Input type='radio' name='4' value='d' id='4_d' />
-                        <s.Label htmlFor='4_d'>
-                          <b>d)</b> риск заключается в возможности заражения телефона компьютерным вирусом
-                        </s.Label>
+                        <RadioGroup value={value} onChange={onChange}>
+                          <Radio value='d' id='4_d'>
+                            <b>d)</b> риск заключается в возможности заражения телефона компьютерным вирусом
+                          </Radio>
+                        </RadioGroup>
                       </s.AnswerWrapper>
                     </>
                   )}
@@ -567,25 +578,25 @@ export const FirstTest = () => {
               </s.Question>
               <s.Answers>
                 <Controller
-                  name='14'
+                  name='15'
                   control={control}
                   render={({ field: { onChange, value } }) => (
                     <>
                       <s.AnswerWrapper>
-                        <s.Input type='radio' name='14' value='a' id='14_a' />
-                        <s.Label htmlFor='14_a'>
+                        <s.Input type='radio' name='15' value='a' id='15_a' />
+                        <s.Label htmlFor='15_a'>
                           <b>a)</b> Хищение жестких дисков, подключение к сети, инсайдерство;
                         </s.Label>
                       </s.AnswerWrapper>
                       <s.AnswerWrapper>
-                        <s.Input type='radio' name='14' value='b' id='14_b' />
-                        <s.Label htmlFor='14_b'>
+                        <s.Input type='radio' name='15' value='b' id='15_b' />
+                        <s.Label htmlFor='15_b'>
                           <b>b)</b> Перехват данных, хищение данных, изменение архитектуры системы;
                         </s.Label>
                       </s.AnswerWrapper>
                       <s.AnswerWrapper>
-                        <s.Input type='radio' name='14' value='c' id='14_c' />
-                        <s.Label htmlFor='14_c'>
+                        <s.Input type='radio' name='15' value='c' id='15_c' />
+                        <s.Label htmlFor='15_c'>
                           <b>c)</b> Хищение данных, подкуп системных администраторов, нарушение регламента работы.
                         </s.Label>
                       </s.AnswerWrapper>
@@ -594,7 +605,7 @@ export const FirstTest = () => {
                 />
               </s.Answers>
             </s.QuestionWrapper>
-            <Button type='submit' onClick={handleSubmit(onSubmit)}>
+            <Button type='submit' onClick={() => handleSubmit(onSubmit)}>
               Показать результат
             </Button>
           </form>
