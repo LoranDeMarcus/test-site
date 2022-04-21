@@ -32,19 +32,21 @@ export const NavList = styled.ul`
   gap: 38px;
 `
 
-export const NavItem = styled.li`
+export const link = css`
   padding: 30px 0;
   font-size: 14px;
   font-weight: 600;
+  color: #333;
   cursor: pointer;
   transition: all 0.3s ease-out 0s;
-  
+  text-decoration: none;
+
   &:hover {
     color: #2042e3;
   }
 `
 
-export const NavItem_Active = styled.li`
+export const link_active = css`
   position: relative;
   padding: 30px 0;
   color: #2042e3;
@@ -52,7 +54,8 @@ export const NavItem_Active = styled.li`
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease-out 0s;
-  
+  text-decoration: none;
+
   &::after {
     width: 100%;
     content: '';
@@ -85,24 +88,5 @@ export const Login = css`
   
   &:hover {
     color: #333;
-  }
-`
-
-export const SignUp = css`
-  color: #fff;
-  background: #2042e3;
-  border: none;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 10px;
-  height: 45px;
-  transition: 0.5s;
-  border-radius: 4px;
-  cursor: pointer;
-  text-align: center;
-  vertical-align: middle;
-  
-  &:hover {
-    background-color: #333;
   }
 `

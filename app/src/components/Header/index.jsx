@@ -1,8 +1,10 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 import * as s from './styles'
 import Container from '../Container'
 import logo from '../../assets/logo.png'
+import { Button } from '../Button'
 
 const Header = () => {
   return (
@@ -12,20 +14,36 @@ const Header = () => {
           <img src={logo} alt='logo' className={s.Image} />
           <s.Navbar>
             <s.NavList>
-              <s.NavItem_Active>
-                Главная
-              </s.NavItem_Active>
-              <s.NavItem>
-                Тестирование
-              </s.NavItem>
+              <li>
+                <NavLink
+                  to='/'
+                  className={({ isActive }) => isActive
+                    ? s.link_active
+                    : s.link
+                  }
+                >
+                  Главная
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to='/testing'
+                  className={({ isActive }) => isActive
+                    ? s.link_active
+                    : s.link
+                  }
+                >
+                  Тестирование
+                </NavLink>
+              </li>
             </s.NavList>
             <s.ButtonsWrapper>
               <button className={s.Login}>
                 Войти
               </button>
-              <button className={s.SignUp}>
+              <Button>
                 Зарегистрироваться
-              </button>
+              </Button>
             </s.ButtonsWrapper>
           </s.Navbar>
         </s.Inner>
