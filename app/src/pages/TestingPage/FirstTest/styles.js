@@ -38,7 +38,7 @@ export const Answers = styled.div`
 `
 
 export const AnswerWrapper = styled.div`
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   display: flex;
   align-items: flex-start;
   gap: 10px;

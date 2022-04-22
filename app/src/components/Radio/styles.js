@@ -1,7 +1,6 @@
 import { styled } from '@linaria/react'
 
 export const RadioWrapper = styled.div`
-  padding-bottom: 10px;
   display: flex;
   align-items: flex-start;
   gap: 10px;

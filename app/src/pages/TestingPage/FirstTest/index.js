@@ -10,7 +10,7 @@ import { Radio, RadioGroup } from '../../../components/Radio'
 import { Checkbox, CheckboxGroup } from '../../../components/Checkbox'
 
 export const FirstTest = () => {
-  const {control, handleSubmit, formState: {errors}} = useForm()
+  const {control, register, handleSubmit, formState: {errors}} = useForm()
 
   console.log(errors)
 
@@ -73,41 +73,30 @@ export const FirstTest = () => {
                 <s.Hint>(Ответ считается верным, если отмечены все правильные варианты ответов.)</s.Hint>
               </s.Question>
               <s.Answers>
-                <Controller
-                  name="2"
-                  control={control}
-                  render={({field: {onChange, value}}) => (
-                    <>
-                      <s.AnswerWrapper>
-                        <s.Input type='checkbox' name='2' value='a' id='2_a' />
-                        <s.Label htmlFor='2_a'>
-                          <b>a)</b> после подключения мыши от зараженного компьютера к незараженному
-                        </s.Label>
-                      </s.AnswerWrapper>
-                      <s.AnswerWrapper>
-                        <CheckboxGroup value={value} onChange={onChange}>
-                          <Checkbox name="2" value="b" id="2_b">
-                            <b>b)</b> через зараженный флэш-диск
-                          </Checkbox>
-                        </CheckboxGroup>
-                      </s.AnswerWrapper>
-                      <s.AnswerWrapper>
-                        <CheckboxGroup value={value} onChange={onChange}>
-                          <Checkbox name="2" value="c" id="2_c">
-                            <b>c)</b> через мошеннический сайт
-                          </Checkbox>
-                        </CheckboxGroup>
-                      </s.AnswerWrapper>
-                      <s.AnswerWrapper>
-                        <CheckboxGroup value={value} onChange={onChange}>
-                          <Checkbox name="2" value="d" id="2_d">
-                            <b>d)</b> через сообщение в системе обмена сообщениями
-                          </Checkbox>
-                        </CheckboxGroup>
-                      </s.AnswerWrapper>
-                    </>
-                  )}
-                />
+                <s.AnswerWrapper>
+                  <s.Input type='checkbox' name='2' value='a' id='2_a' {...register('2')} />
+                  <s.Label htmlFor='2_a'>
+                    <b>a)</b> после подключения мыши от зараженного компьютера к незараженному
+                  </s.Label>
+                </s.AnswerWrapper>
+                <s.AnswerWrapper>
+                  <s.Input type='checkbox' name='2' value='b' id='2_b' {...register('2')} />
+                  <s.Label htmlFor='2_b'>
+                    <b>b)</b> через зараженный флэш-диск
+                  </s.Label>
+                </s.AnswerWrapper>
+                <s.AnswerWrapper>
+                  <s.Input type='checkbox' name='2' value='c' id='2_c' {...register('2')} />
+                  <s.Label htmlFor='2_c'>
+                    <b>c)</b> через мошеннический сайт
+                  </s.Label>
+                </s.AnswerWrapper>
+                <s.AnswerWrapper>
+                  <s.Input type='checkbox' name='2' value='d' id='2_d' {...register('2')} />
+                  <s.Label htmlFor='2_d'>
+                    <b>d)</b> через сообщение в системе обмена сообщениями
+                  </s.Label>
+                </s.AnswerWrapper>
               </s.Answers>
             </s.QuestionWrapper>
             <s.QuestionWrapper>
@@ -116,34 +105,26 @@ export const FirstTest = () => {
                 <s.Hint>(Ответ считается верным, если отмечены все правильные варианты ответов.)</s.Hint>
               </s.Question>
               <s.Answers>
-                <Controller
-                  name="3"
-                  control={control}
-                  render={({field: {onChange, value}}) => (
-                    <>
-                      <s.AnswerWrapper>
-                        <s.Input type="checkbox" name="3" value="a" id="3_a" />
-                        <s.Label htmlFor="3_a">
-                          <b>a)</b> они могут передавать злоумышленникам конфиденциальные сведения
-                        </s.Label>
-                      </s.AnswerWrapper>
-                      <s.AnswerWrapper>
-                        <s.Input type="checkbox" name="3" value="b" id="3_b" />
-                        <s.Label htmlFor="3_b">
-                          <b>b)</b> они могут нарушать работу компьютеров
-                        </s.Label>
-                      </s.AnswerWrapper>
-                      <s.AnswerWrapper>
-                        <s.Input type="checkbox" name="3" value="c" id="3_c" />
-                        <s.Label htmlFor="3_c">
-                          <b>c)</b> они могут поддерживать осмысленный диалог по электронной почте,
-                          неотличимый от диалога с реальным собеседником, обманом узнавая у пользователя
-                          конфиденциальные сведения
-                        </s.Label>
-                      </s.AnswerWrapper>
-                    </>
-                  )}
-                />
+                <s.AnswerWrapper>
+                  <s.Input type='checkbox' name='3' value='a' id='3_a' {...register('3')} />
+                  <s.Label htmlFor="3_a">
+                    <b>a)</b> они могут передавать злоумышленникам конфиденциальные сведения
+                  </s.Label>
+                </s.AnswerWrapper>
+                <s.AnswerWrapper>
+                  <s.Input type='checkbox' name='3' value='b' id='3_b' {...register('3')} />
+                  <s.Label htmlFor="3_b">
+                    <b>b)</b> они могут нарушать работу компьютеров
+                  </s.Label>
+                </s.AnswerWrapper>
+                <s.AnswerWrapper>
+                  <s.Input type='checkbox' name='3' value='c' id='3_c' {...register('3')} />
+                  <s.Label htmlFor="3_c">
+                    <b>c)</b> они могут поддерживать осмысленный диалог по электронной почте,
+                    неотличимый от диалога с реальным собеседником, обманом узнавая у пользователя
+                    конфиденциальные сведения
+                  </s.Label>
+                </s.AnswerWrapper>
               </s.Answers>
             </s.QuestionWrapper>
             <s.QuestionWrapper>
@@ -478,29 +459,24 @@ export const FirstTest = () => {
                 [13]. Основные составляющие информационной безопасности:
               </s.Question>
               <s.Answers>
-                <Controller
-                  name="13"
-                  control={control}
-                  render={({field: {onChange, value}}) => (
-                    <RadioGroup value={value} onChange={onChange}>
-                      <s.AnswerWrapper>
-                        <Radio name="13" value="a" id="13_a">
-                          <b>a)</b> Целостность
-                        </Radio>
-                      </s.AnswerWrapper>
-                      <s.AnswerWrapper>
-                        <Radio name="13" value="b" id="13_b">
-                          <b>b)</b> Достоверность
-                        </Radio>
-                      </s.AnswerWrapper>
-                      <s.AnswerWrapper>
-                        <Radio name="13" value="c" id="13_c">
-                          <b>c)</b> Конфиденциальность
-                        </Radio>
-                      </s.AnswerWrapper>
-                    </RadioGroup>
-                  )}
-                />
+                <s.AnswerWrapper>
+                  <s.Input type='checkbox' name='13' value='a' id='13_a' {...register('13')} />
+                  <s.Label htmlFor="13_a">
+                    <b>a)</b> Целостность
+                  </s.Label>
+                </s.AnswerWrapper>
+                <s.AnswerWrapper>
+                  <s.Input type='checkbox' name='13' value='b' id='13_b' {...register('13')} />
+                  <s.Label htmlFor="13_b">
+                    <b>b)</b> Достоверность
+                  </s.Label>
+                </s.AnswerWrapper>
+                <s.AnswerWrapper>
+                  <s.Input type='checkbox' name='13' value='c' id='13_c' {...register('13')} />
+                  <s.Label htmlFor="13_c">
+                    <b>c)</b> Конфиденциальность
+                  </s.Label>
+                </s.AnswerWrapper>
               </s.Answers>
             </s.QuestionWrapper>
             <s.QuestionWrapper>
