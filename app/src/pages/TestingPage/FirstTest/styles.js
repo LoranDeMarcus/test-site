@@ -52,3 +52,12 @@ export const Label = styled.label`
   color: #333;
   cursor: pointer;
 `
+
+export const ResultWrapper = styled.div`
+  font-size: 20px;
+`
+
+export const Result = styled.p`
+  font-size: 16px;
+  line-height: 22px;
+`
