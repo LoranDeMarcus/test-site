@@ -7,10 +7,9 @@ import Header from '../../../components/Header'
 import { Wrapper } from '../styles'
 import * as s from './styles'
 import { Radio, RadioGroup } from '../../../components/Radio'
-import { Checkbox, CheckboxGroup } from '../../../components/Checkbox'
 
 export const FirstTest = () => {
-  const {control, register, handleSubmit, formState: {errors}} = useForm()
+  const { control, register, handleSubmit, formState: { errors } } = useForm()
 
   console.log(errors)
 
