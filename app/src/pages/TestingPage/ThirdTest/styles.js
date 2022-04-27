@@ -52,7 +52,7 @@ export const Input = styled.input`
 
 export const Label = styled.label`
   font-size: 16px;
-  color: ${colors.black};
+  color: #333;
   cursor: pointer;
 `
 

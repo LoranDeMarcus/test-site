@@ -2,7 +2,6 @@ import React from 'react'
 import Header from '../../components/Header'
 import Container from '../../components/Container'
 import * as s from './styles'
-import { button } from '../../components/Button/styles'
 import { NavLink } from 'react-router-dom'
 
 export const TestingPage = () => {
@@ -27,9 +26,20 @@ export const TestingPage = () => {
             определите ключевые задачи и найдете свои точки роста!
           </s.Text>
         </s.Wrapper>
-        <NavLink to='/testing/1' className={button}>
-          Войти
-        </NavLink>
+        <s.LinkWrapper>
+          <s.Text>
+            <b>Выберите раздел тестирования:</b>
+          </s.Text>
+          <NavLink to='/testing/1' className={s.link}>
+            1. Безопасность в сети интернет
+          </NavLink>
+          <NavLink to='/testing/2' className={s.link}>
+            2. Управление информацией и данными
+          </NavLink>
+          <NavLink to='/testing/3' className={s.link}>
+            3. Управление цифровой идентичностью
+          </NavLink>
+        </s.LinkWrapper>
       </Container>
     </div>
   )

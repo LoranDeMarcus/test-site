@@ -1,4 +1,5 @@
 import { styled } from '@linaria/react'
+import { colors } from '../../assets/constants'
 
 export const RadioWrapper = styled.div`
   display: flex;
@@ -8,6 +9,6 @@ export const RadioWrapper = styled.div`
 
 export const Label = styled.label`
   font-size: 16px;
-  color: #333;
+  color: ${colors.black};
   cursor: pointer;
 `

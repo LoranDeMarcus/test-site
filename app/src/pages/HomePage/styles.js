@@ -1,5 +1,6 @@
 import { styled } from '@linaria/react'
 import { css } from '@linaria/core'
+import { colors } from '../../assets/constants'
 
 export const Wrapper = styled.div`
   margin-top: 80px;
@@ -20,7 +21,7 @@ export const Title = styled.h1`
   font-size: 40px;
   font-weight: 700;
   line-height: 55px;
-  color: #081828;
+  color: ${colors.dark};
 `
 
 export const Text = styled.p`

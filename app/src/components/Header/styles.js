@@ -1,5 +1,6 @@
 import { styled } from '@linaria/react'
 import { css } from '@linaria/core'
+import { colors } from '../../assets/constants'
 
 export const Header = styled.header`
   height: 80px;
@@ -36,20 +37,20 @@ export const link = css`
   padding: 30px 0;
   font-size: 14px;
   font-weight: 600;
-  color: #333;
+  color: ${colors.black};
   cursor: pointer;
   transition: all 0.3s ease-out 0s;
   text-decoration: none;
 
   &:hover {
-    color: #2042e3;
+    color: ${colors.blue};
   }
 `
 
 export const link_active = css`
   position: relative;
   padding: 30px 0;
-  color: #2042e3;
+  color: ${colors.blue};
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -63,7 +64,7 @@ export const link_active = css`
     left: 0;
     bottom: -1px;
     height: 3px;
-    background: #2042e3;
+    background: ${colors.blue};
     border-radius: 10px;
     transition: all 0.3s ease-out 0s;
     z-index: 5;
@@ -82,11 +83,11 @@ export const Login = css`
   background-color: transparent;
   font-size: 14px;
   font-weight: 600;
-  color: #2042e3;
+  color: ${colors.blue};
   cursor: pointer;
   transition: all 0.3s ease-out 0s;
   
   &:hover {
-    color: #333;
+    color: ${colors.black};
   }
 `

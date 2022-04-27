@@ -1,10 +1,9 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-
-import * as s from './styles'
 import Container from '../Container'
 import logo from '../../assets/logo.png'
-import { Button } from '../Button'
+import { button } from '../Button/styles'
+import * as s from './styles'
 
 const Header = () => {
   return (
@@ -33,18 +32,18 @@ const Header = () => {
                     : s.link
                   }
                 >
-                  Тестирование
+                  Оценка
+                </NavLink>
+              </li>
+              <li style={{ marginLeft: '20px' }}>
+                <NavLink
+                  to='/cabinet'
+                  className={button}
+                >
+                  Личный кабинет
                 </NavLink>
               </li>
             </s.NavList>
-            <s.ButtonsWrapper>
-              <button className={s.Login}>
-                Войти
-              </button>
-              <Button>
-                Зарегистрироваться
-              </Button>
-            </s.ButtonsWrapper>
           </s.Navbar>
         </s.Inner>
       </Container>
