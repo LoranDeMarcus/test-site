@@ -67,25 +67,25 @@ export const InternetSecurity = () => {
                       render={({ field: { onChange, value } }) => (
                         <RadioGroup value={value} onChange={onChange}>
                           <s.AnswerWrapper>
-                            <Radio name="a" value="a" id="1_a">
+                            <Radio name="1" value="a" id="1_a">
                               такая ошибка всегда приводит к автоматическому переходу на официальный
                               сайт той страны, в которой находится пользователь
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
-                            <Radio name="b" value="b" id="1_b">
+                            <Radio name="1" value="b" id="1_b">
                               может быть осуществлен переход на мошеннический сайт для кражи учетных
                               данных пользователей, который очень похож на тот, на который был запланирован переход
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
-                            <Radio name="c" value="c" id="1_c">
+                            <Radio name="1" value="c" id="1_c">
                               система автоматически исправит ошибку, в любом случае пользователь попадет на нужный
                               сайт
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
-                            <Radio name="d" value="d" id="1_d">
+                            <Radio name="1" value="d" id="1_d">
                               такая ошибка всегда приводит к тому, что не будет осуществлен переход ни на какой
                               сайт
                             </Radio>
