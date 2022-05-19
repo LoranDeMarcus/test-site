@@ -39,6 +39,9 @@ export const TestingPage = () => {
           <NavLink to="/testing/identity-management" className={s.link}>
             3. Управление цифровой идентичностью
           </NavLink>
+          <NavLink to="/testing/digital-communication" className={s.link}>
+            4. Коммуникация в цифровой среде
+          </NavLink>
         </s.LinkWrapper>
       </Container>
     </div>

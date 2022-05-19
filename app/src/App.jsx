@@ -6,6 +6,7 @@ import { CabinetPage } from './pages/CabinetPage'
 import { InternetSecurity } from './pages/TestingPage/InternetSecurity'
 import { InformationControl } from './pages/TestingPage/InformationControl'
 import { IdentityManagement } from './pages/TestingPage/IdentityManagement'
+import { DigitalCommunication } from './pages/TestingPage/DigitalCommunication'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/testing/internet-security' element={<InternetSecurity />} />
         <Route path='/testing/information-control' element={<InformationControl />} />
         <Route path='/testing/identity-management' element={<IdentityManagement />} />
+        <Route path='/testing/digital-communication' element={<DigitalCommunication />} />
       </Routes>
     </HashRouter>
   )
