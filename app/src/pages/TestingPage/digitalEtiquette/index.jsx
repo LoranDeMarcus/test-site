@@ -56,37 +56,45 @@ export const DigitalEtiquette = () => {
               <form onSubmit={handleSubmit(onSubmit)} className={s.form}>
                 <s.QuestionWrapper>
                   <s.Question>
-                    1. Что такое троллинг?
+                    1. Цифровой этикет
                   </s.Question>
                   <s.Answers>
-                    <Controller
-                      name="1"
-                      control={control}
-                      render={({ field: { onChange, value } }) => (
-                        <RadioGroup value={value} onChange={onChange}>
-                          <s.AnswerWrapper>
-                            <Radio name="a" value="a" id="1_a">
-                              возможность авторизоваться на сайте
-                            </Radio>
-                          </s.AnswerWrapper>
-                          <s.AnswerWrapper>
-                            <Radio name="b" value="b" id="1_b">
-                              вид виртуального общения, в котором нагнетается конфликт
-                            </Radio>
-                          </s.AnswerWrapper>
-                          <s.AnswerWrapper>
-                            <Radio name="c" value="c" id="1_c">
-                              представитель царства животных
-                            </Radio>
-                          </s.AnswerWrapper>
-                        </RadioGroup>
-                      )}
-                    />
+                    <s.AnswerWrapper>
+                      <s.Input type="checkbox" name="1" value="a" id="1_a" {...register('1')} />
+                      <s.Label htmlFor="1_a">
+                        знать и уважать своего адресата
+                      </s.Label>
+                    </s.AnswerWrapper>
+                    <s.AnswerWrapper>
+                      <s.Input type="checkbox" name="1" value="b" id="1_b" {...register('1')} />
+                      <s.Label htmlFor="1_b">
+                        указывать тему сообщения
+                      </s.Label>
+                    </s.AnswerWrapper>
+                    <s.AnswerWrapper>
+                      <s.Input type="checkbox" name="1" value="c" id="1_c" {...register('1')} />
+                      <s.Label htmlFor="1_c">
+                        в текстовых сообщениях можно выражать эмоции с помощью небольших рисунков, называемых смайликами
+                      </s.Label>
+                    </s.AnswerWrapper>
+                    <s.AnswerWrapper>
+                      <s.Input type="checkbox" name="1" value="d" id="1_d" {...register('1')} />
+                      <s.Label htmlFor="1_d">
+                        не запрашивать подтверждение получения сообщения без надобности
+                      </s.Label>
+                    </s.AnswerWrapper>
+                    <s.AnswerWrapper>
+                      <s.Input type="checkbox" name="1" value="e" ie="1_e" {...register('1')} />
+                      <s.Label htmlFor="1_e">
+                        не допускать спама – бессодержательных, навязчивых или грубых сообщений
+                        в адрес другого лица или группы лиц
+                      </s.Label>
+                    </s.AnswerWrapper>
                   </s.Answers>
                 </s.QuestionWrapper>
                 <s.QuestionWrapper>
                   <s.Question>
-                    2. Что такое плагиат?
+                    2. В каких случаях уместно отправлять аудиосообщение?
                   </s.Question>
                   <s.Answers>
                     <Controller
@@ -96,17 +104,17 @@ export const DigitalEtiquette = () => {
                         <RadioGroup value={value} onChange={onChange}>
                           <s.AnswerWrapper>
                             <Radio name="a" value="a" id="2_a">
-                              умышленное присвоение авторства
+                              когда вам не удобно писать текстовое
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="b" value="b" id="2_b">
-                              вид африканского попугая
+                              только в неформальном общении
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="c" value="c" id="2_c">
-                              неуникальный текст
+                              только если это заранее обговорено с адресатом
                             </Radio>
                           </s.AnswerWrapper>
                         </RadioGroup>
@@ -116,7 +124,7 @@ export const DigitalEtiquette = () => {
                 </s.QuestionWrapper>
                 <s.QuestionWrapper>
                   <s.Question>
-                    3.	Что такое аватар?
+                    3.	Когда лучше отправлять рабочие письма и сообщения?
                   </s.Question>
                   <s.Answers>
                     <Controller
@@ -126,17 +134,17 @@ export const DigitalEtiquette = () => {
                         <RadioGroup value={value} onChange={onChange}>
                           <s.AnswerWrapper>
                             <Radio name="a" value="a" id="3_a">
-                              данные о пользователе
+                              в любое время – кроме выходных и праздников
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="b" value="b" id="3_b">
-                              электронный адрес
+                              в рабочее время
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="c" value="c" id="3_c">
-                              изображение для профиля на сайте
+                              когда угодно, ведь это не звонок
                             </Radio>
                           </s.AnswerWrapper>
                         </RadioGroup>
@@ -146,7 +154,7 @@ export const DigitalEtiquette = () => {
                 </s.QuestionWrapper>
                 <s.QuestionWrapper>
                   <s.Question>
-                    4. Общаясь в чате, форуме, гостевой книге, Вам следует быть:
+                    4.	Что такое хотлинкинг?
                   </s.Question>
                   <s.Answers>
                     <Controller
@@ -156,17 +164,17 @@ export const DigitalEtiquette = () => {
                         <RadioGroup value={value} onChange={onChange}>
                           <s.AnswerWrapper>
                             <Radio name="4" value="a" id="4_a">
-                              твердым в своем мнении и убеждать других в нём
+                              сообщения, присылаемые вам от неизвестных людей или организаций, которым вы не давали на это разрешения
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="4" value="b" id="4_b">
-                              вежливым с теми, кто вежлив с вами
+                              переполнение текста на форуме, e-mail, новостной группе избыточными цитатами
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="4" value="c" id="4_c">
-                              тактичным и корректным в своих высказываниях
+                              включение в веб-страницу файлов-изображений или других ресурсов с чужого сервера
                             </Radio>
                           </s.AnswerWrapper>
                         </RadioGroup>
@@ -176,7 +184,7 @@ export const DigitalEtiquette = () => {
                 </s.QuestionWrapper>
                 <s.QuestionWrapper>
                   <s.Question>
-                    5.	Спам – это:
+                    5.	Цифровая культура – это…
                   </s.Question>
                   <s.Answers>
                     <Controller
@@ -187,22 +195,20 @@ export const DigitalEtiquette = () => {
                           <RadioGroup value={value} onChange={onChange}>
                             <s.AnswerWrapper>
                               <Radio name="5" value="a" id="5_a">
-                                агрессивное поведение на форумах
+                                1.	комплекс мер, направленных на защиту конфиденциальности, целостности и
+                                доступности информации от вирусных атак и несанкционированного вмешательства
                               </Radio>
                             </s.AnswerWrapper>
                             <s.AnswerWrapper>
                               <Radio name="5" value="b" id="5_b">
-                                цепочка непонятных, нелогичных объяснений
+                                2.	набор принципов и компетенций, характеризующих преимущественное
+                                использование информационно-коммуникационных цифровых технологий для взаимодействия с обществом и решения задач в профессиональной деятельности
                               </Radio>
                             </s.AnswerWrapper>
                             <s.AnswerWrapper>
                               <Radio name="5" value="c" id="5_c">
-                                словесная война
-                              </Radio>
-                            </s.AnswerWrapper>
-                            <s.AnswerWrapper>
-                              <Radio name="5" value="d" id="5_d">
-                                массовая рассылка рекламы и прочих объявлений
+                                3.	правила поведения, принятые в том или ином обществе и адаптированные
+                                в цифровой среде
                               </Radio>
                             </s.AnswerWrapper>
                           </RadioGroup>
@@ -213,7 +219,7 @@ export const DigitalEtiquette = () => {
                 </s.QuestionWrapper>
                 <s.QuestionWrapper>
                   <s.Question>
-                    6.	Набор слов ЗАГЛАВНЫМИ буквами в чате служит:
+                    6.	Лишение или ограничение каких-либо прав пользователя:
                   </s.Question>
                   <s.Answers>
                     <Controller
@@ -223,17 +229,22 @@ export const DigitalEtiquette = () => {
                         <RadioGroup value={value} onChange={onChange}>
                           <s.AnswerWrapper>
                             <Radio name="6" value="a" id="6_a">
-                              для выражения сильных эмоций (крика, восторга)
+                              бан
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="6" value="b" id="6_b">
-                              для написания заголовка текста
+                              спам
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="6" value="c" id="6_c">
-                              для написания имени и фамилии
+                              флуд
+                            </Radio>
+                          </s.AnswerWrapper>
+                          <s.AnswerWrapper>
+                            <Radio name="6" value="c" id="6_c">
+                              апгрейд
                             </Radio>
                           </s.AnswerWrapper>
                         </RadioGroup>
@@ -243,7 +254,8 @@ export const DigitalEtiquette = () => {
                 </s.QuestionWrapper>
                 <s.QuestionWrapper>
                   <s.Question>
-                    7.	Что такое флуд?
+                    7.	Вам на телефон поступил деловой звонок, но по какой-то причине во время
+                    разговора связь разъединилась. Ваши действия:
                   </s.Question>
                   <s.Answers>
                     <Controller
@@ -253,17 +265,17 @@ export const DigitalEtiquette = () => {
                         <RadioGroup value={value} onChange={onChange}>
                           <s.AnswerWrapper>
                             <Radio name="7" value="a" id="7_a">
-                              массовая рассылка рекламы
+                              сами наберёте номер, чтобы продолжить разговор
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="7" value="b" id="7_b">
-                              сообщение на сайте/форуме не несущее смысловой нагрузки
+                              подождёте, пока вам перезвонят
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="7" value="c" id="7_c">
-                              реклама на сайте
+                              отправите СМС с вопросом «Что случилось?»
                             </Radio>
                           </s.AnswerWrapper>
                         </RadioGroup>
@@ -273,7 +285,7 @@ export const DigitalEtiquette = () => {
                 </s.QuestionWrapper>
                 <s.QuestionWrapper>
                   <s.Question>
-                    8.	Что такое флейм?
+                    8.	Вы ведете лекцию, во время которой у вас звонит телефон. Ваши действия:
                   </s.Question>
                   <s.Answers>
                     <Controller
@@ -283,17 +295,17 @@ export const DigitalEtiquette = () => {
                         <RadioGroup value={value} onChange={onChange}>
                           <s.AnswerWrapper>
                             <Radio name="8" value="a" id="8_a">
-                              не активный аккаунт
+                              извинитесь, выйдете в коридор, чтобы не мешать собравшимся
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="8" value="b" id="8_b">
-                              словесная война
+                              ответите и сообщите, что перезвоните позже
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="8" value="c" id="8_c">
-                              неинформативный ответ
+                              уберете звук и не будете отвлекаться на посторонние раздражители, пусть звонит
                             </Radio>
                           </s.AnswerWrapper>
                         </RadioGroup>
@@ -303,7 +315,8 @@ export const DigitalEtiquette = () => {
                 </s.QuestionWrapper>
                 <s.QuestionWrapper>
                   <s.Question>
-                    9. Что такое оффтоп?
+                    9.	Как называется поведение человека, который держит мобильный телефон ночью возле своей кровати,
+                    беспокоясь пропустить сообщение, если оно дойдет во время сна?
                   </s.Question>
                   <s.Answers>
                     <Controller
@@ -313,17 +326,17 @@ export const DigitalEtiquette = () => {
                         <RadioGroup value={value} onChange={onChange}>
                           <s.AnswerWrapper>
                             <Radio name="9" value="a" id="9_a">
-                              создание тем имеющих отношение к тематике форума
+                              пользовательская активность
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="9" value="b" id="9_b">
-                              создание тем, не имеющих отношение к тематике форума
+                              Зависимость
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="9" value="c" id="9_c">
-                              создание оскорбительных сообщений
+                              гиперактивность
                             </Radio>
                           </s.AnswerWrapper>
                         </RadioGroup>
@@ -333,7 +346,7 @@ export const DigitalEtiquette = () => {
                 </s.QuestionWrapper>
                 <s.QuestionWrapper>
                   <s.Question>
-                    10.	Кибербуллинг — это:
+                    10.	Выберите правильную тему для электронного письма
                   </s.Question>
                   <s.Answers>
                     <Controller
@@ -343,19 +356,32 @@ export const DigitalEtiquette = () => {
                         <RadioGroup value={value} onChange={onChange}>
                           <s.AnswerWrapper>
                             <Radio name="10" value="a" id="10_a">
-                              система передачи мультимедийных объявлений
+                              Пустая тема
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="10" value="b" id="10_b">
-                              программа для защиты компьютера или мобильного устройства от вредоносных программ
+                              В продолжение разговора
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="10" value="c" id="10_c">
-                              травля, оскорбления или угрозы, высказываемые жертве с помощью средств электронной
-                              коммуникации, в частности, сообщений в социальных сетях, мгновенных сообщений,
-                              электронных писем и смс
+                              Информация для совещания
+                            </Radio>
+                          </s.AnswerWrapper>
+                          <s.AnswerWrapper>
+                            <Radio name="10" value="c" id="10_c">
+                              От Василия
+                            </Radio>
+                          </s.AnswerWrapper>
+                          <s.AnswerWrapper>
+                            <Radio name="10" value="c" id="10_c">
+                              Вопрос
+                            </Radio>
+                          </s.AnswerWrapper>
+                          <s.AnswerWrapper>
+                            <Radio name="10" value="c" id="10_c">
+                              Срочно!
                             </Radio>
                           </s.AnswerWrapper>
                         </RadioGroup>
@@ -365,8 +391,7 @@ export const DigitalEtiquette = () => {
                 </s.QuestionWrapper>
                 <s.QuestionWrapper>
                   <s.Question>
-                    11.	Комплекс правил и мер по предотвращению предполагаемого негативного воздействия
-                    Интернета и компьютера на ребенка, называется:
+                    11.	Где во время деловой встречи должен находиться ваш мобильный телефон?
                   </s.Question>
                   <s.Answers>
                     <Controller
@@ -376,17 +401,17 @@ export const DigitalEtiquette = () => {
                         <RadioGroup value={value} onChange={onChange}>
                           <s.AnswerWrapper>
                             <Radio name="11" value="a" id="11_a">
-                              антивирус
+                              на столе перед вами
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="11" value="b" id="11_b">
-                              родительский контроль
+                              в сумочке или кармане
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="11" value="c" id="11_c">
-                              программное обеспечение «Без забот»
+                              не играет роли
                             </Radio>
                           </s.AnswerWrapper>
                         </RadioGroup>
@@ -396,7 +421,7 @@ export const DigitalEtiquette = () => {
                 </s.QuestionWrapper>
                 <s.QuestionWrapper>
                   <s.Question>
-                    12.	Выберите признаки интернет-зависимости человека:
+                    12.	Выберите оптимальное имя для рабочей почты:
                   </s.Question>
                   <s.Answers>
                     <Controller
@@ -406,17 +431,27 @@ export const DigitalEtiquette = () => {
                         <RadioGroup value={value} onChange={onChange}>
                           <s.AnswerWrapper>
                             <Radio name="12" value="a" id="12_a">
-                              отклоняет вашу заявку на добавления в «друзья» в социальной сети
+                              IvanIvanov
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="12" value="b" id="12_b">
-                              неохотно рассказывает или вообще скрывает, чем занимается в сети
+                              VanyaIvanov
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="12" value="c" id="12_c">
-                              неадекватное поведение в ответ на предложение выключить гаджет — вплоть до скандала
+                              MyPost
+                            </Radio>
+                          </s.AnswerWrapper>
+                          <s.AnswerWrapper>
+                            <Radio name="12" value="c" id="12_c">
+                              Ivan11021998
+                            </Radio>
+                          </s.AnswerWrapper>
+                          <s.AnswerWrapper>
+                            <Radio name="12" value="c" id="12_c">
+                              Vanek
                             </Radio>
                           </s.AnswerWrapper>
                         </RadioGroup>
@@ -426,33 +461,32 @@ export const DigitalEtiquette = () => {
                 </s.QuestionWrapper>
                 <s.QuestionWrapper>
                   <s.Question>
-                    13.	Какие меры осторожности нужно предпринять при получении большого количества спама?
+                    13.	Нетикет - это ...
                   </s.Question>
                   <s.Answers>
                     <s.AnswerWrapper>
                       <s.Input type="checkbox" name="13" value="a" id="13_a" {...register('13')} />
                       <s.Label htmlFor="13_a">
-                        попросить отправителей больше не присылать их
+                        отрицание этикета
                       </s.Label>
                     </s.AnswerWrapper>
                     <s.AnswerWrapper>
                       <s.Input type="checkbox" name="13" value="b" id="13_b" {...register('13')} />
                       <s.Label htmlFor="13_b">
-                        удалить весь спам и включить фильтр спама
+                        нормы общения в сети Интернет
                       </s.Label>
                     </s.AnswerWrapper>
                     <s.AnswerWrapper>
                       <s.Input type="checkbox" name="13" value="c" id="13_c" {...register('13')} />
                       <s.Label htmlFor="13_c">
-                        открыть сообщения и узнать, что в них содержится
+                        нормы сетевого взаимодействия, прописанные в законодательстве
                       </s.Label>
                     </s.AnswerWrapper>
                   </s.Answers>
                 </s.QuestionWrapper>
                 <s.QuestionWrapper>
                   <s.Question>
-                    14.	Можно ли удалить из сети Интернет собственную фотографию после того как она была
-                    передана или опубликована на вашей странице в социальной сети?
+                    14.	Подчеркнутый шрифт в письме используется, если Вы
                   </s.Question>
                   <s.Answers>
                     <Controller
@@ -462,47 +496,17 @@ export const DigitalEtiquette = () => {
                         <RadioGroup value={value} onChange={onChange}>
                           <s.AnswerWrapper>
                             <Radio name="14" value="a" id="14_a">
-                              после публикации фотографии в Интернете ее больше невозможно контролировать
+                              хотите подчеркнуть значимость Ваших слов
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="14" value="b" id="14_b">
-                              фотографию можно легко удалить, попросив об этом специалиста
+                              вставляете гиперссылку
                             </Radio>
                           </s.AnswerWrapper>
                           <s.AnswerWrapper>
                             <Radio name="14" value="c" id="14_c">
-                              можно самому удалить фотографию с веб-сайта
-                            </Radio>
-                          </s.AnswerWrapper>
-                        </RadioGroup>
-                      )}
-                    />
-                  </s.Answers>
-                </s.QuestionWrapper>
-                <s.QuestionWrapper>
-                  <s.Question>
-                    15. Сетевые коммуникации – это…
-                  </s.Question>
-                  <s.Answers>
-                    <Controller
-                      name="15"
-                      control={control}
-                      render={({ field: { onChange, value } }) => (
-                        <RadioGroup value={value} onChange={onChange}>
-                          <s.AnswerWrapper>
-                            <Radio name="15" value="a" id="15_a">
-                              Система правил поведения в Интернете
-                            </Radio>
-                          </s.AnswerWrapper>
-                          <s.AnswerWrapper>
-                            <Radio name="15" value="b" id="15_b">
-                              средства обмена информацией через сеть Интернет, создающее при этом новое культурное пространство
-                            </Radio>
-                          </s.AnswerWrapper>
-                          <s.AnswerWrapper>
-                            <Radio name="15" value="c" id="15_c">
-                              понимание современных информационных технологий, их функционала, а также возможность грамотно использовать их в работе или быту
+                              решили украсить своё высказывание
                             </Radio>
                           </s.AnswerWrapper>
                         </RadioGroup>
