@@ -49,7 +49,7 @@ export const TestingPage = () => {
             6. Разработка и реализация цифрового образовательного контента
           </NavLink>
           <NavLink to="/testing/teacher-digital-techs" className={s.link}>
-            6. Разработка и реализация цифрового образовательного контента
+            7. Использование сквозных цифровых технологий в деятельности педагога
           </NavLink>
         </s.LinkWrapper>
       </Container>
