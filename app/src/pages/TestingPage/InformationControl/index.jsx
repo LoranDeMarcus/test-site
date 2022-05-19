@@ -8,7 +8,7 @@ import { Wrapper } from '../styles'
 import * as s from './styles'
 import { Radio, RadioGroup } from '../../../components/Radio'
 
-export const SecondTest = () => {
+export const InformationControl = () => {
   const { control, register, reset, handleSubmit, formState: { errors } } = useForm()
   const [result, setResult] = useState()
 

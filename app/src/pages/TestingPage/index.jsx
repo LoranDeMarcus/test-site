@@ -30,13 +30,13 @@ export const TestingPage = () => {
           <s.Text>
             <b>Выберите раздел тестирования:</b>
           </s.Text>
-          <NavLink to="/testing/1" className={s.link}>
+          <NavLink to="/testing/internet-security" className={s.link}>
             1. Безопасность в сети интернет
           </NavLink>
-          <NavLink to="/testing/2" className={s.link}>
+          <NavLink to="/testing/information-control" className={s.link}>
             2. Управление информацией и данными
           </NavLink>
-          <NavLink to="/testing/3" className={s.link}>
+          <NavLink to="/testing/identity-management" className={s.link}>
             3. Управление цифровой идентичностью
           </NavLink>
         </s.LinkWrapper>
