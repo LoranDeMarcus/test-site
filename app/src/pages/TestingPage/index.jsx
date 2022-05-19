@@ -45,6 +45,9 @@ export const TestingPage = () => {
           <NavLink to="/testing/digital-etiquette" className={s.link}>
             5. Цифровой этикет
           </NavLink>
+          <NavLink to="/testing/develop-digital-content" className={s.link}>
+            6. Разработка и реализация цифрового образовательного контента
+          </NavLink>
         </s.LinkWrapper>
       </Container>
     </div>

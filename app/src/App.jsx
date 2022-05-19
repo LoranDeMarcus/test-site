@@ -8,6 +8,7 @@ import { InformationControl } from './pages/TestingPage/informationControl'
 import { IdentityManagement } from './pages/TestingPage/identityManagement'
 import { DigitalCommunication } from './pages/TestingPage/digitalCommunication'
 import { DigitalEtiquette } from './pages/TestingPage/digitalEtiquette'
+import { DevelopDigitalContent } from './pages/TestingPage/developDigitalContent'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/testing/identity-management' element={<IdentityManagement />} />
         <Route path='/testing/digital-communication' element={<DigitalCommunication />} />
         <Route path='/testing/digital-etiquette' element={<DigitalEtiquette />} />
+        <Route path='/testing/develop-digital-content' element={<DevelopDigitalContent />} />
       </Routes>
     </HashRouter>
   )
