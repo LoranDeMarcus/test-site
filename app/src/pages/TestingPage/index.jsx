@@ -42,6 +42,9 @@ export const TestingPage = () => {
           <NavLink to="/testing/digital-communication" className={s.link}>
             4. Коммуникация в цифровой среде
           </NavLink>
+          <NavLink to="/testing/digital-etiquette" className={s.link}>
+            5. Цифровой этикет
+          </NavLink>
         </s.LinkWrapper>
       </Container>
     </div>
