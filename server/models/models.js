@@ -10,7 +10,7 @@ const User = sequelize.define('user', {
   lastName: { type: DataTypes.STRING, allowNull: false },
   middleName: { type: DataTypes.STRING, allowNull: false },
   department: { type: DataTypes.STRING, allowNull: false },
-  role: { type: DataTypes.STRING, defaultValue: 'USER' }
+  role: { type: DataTypes.STRING, defaultValue: 'user' }
 })
 
 const UserResult = sequelize.define('user_result', {
@@ -20,7 +20,7 @@ const UserResult = sequelize.define('user_result', {
 const Question = sequelize.define('question', {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
   name: { type: DataTypes.STRING, allowNull: false },
-  questionChapter: { type: DataTypes.STRING, allowNull: false },
+  chapter: { type: DataTypes.STRING, allowNull: false },
   answers: { type: DataTypes.ARRAY(DataTypes.STRING), allowNull: false },
   rightAnswers: { type: DataTypes.ARRAY(DataTypes.STRING), allowNull: false },
 })

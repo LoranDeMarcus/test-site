@@ -4,10 +4,10 @@ const ApiError = require('../error/ApiError')
 class QuestionController {
   async create(req, res, next) {
     try {
-      const { name, questionChapter, answers, rightAnswers } = req.body
+      const { name, chapter, answers, rightAnswers } = req.body
       const question = await Question.create({
         name,
-        questionChapter,
+        chapter,
         answers,
         rightAnswers
       })
