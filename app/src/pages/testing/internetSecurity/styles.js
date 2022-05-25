@@ -20,7 +20,7 @@ export const form = css`
 
 export const QuestionWrapper = styled.div`
   padding: 30px 0;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid ${colors.gray};
 `
 
 export const Question = styled.p`

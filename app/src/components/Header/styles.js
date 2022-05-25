@@ -4,7 +4,7 @@ import { colors } from '../../assets/constants'
 
 export const Header = styled.header`
   height: 80px;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid ${colors.gray};
 `
 
 export const Inner = styled.div`

@@ -1,30 +1,37 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { HashRouter, Route, Routes } from 'react-router-dom'
-import { HomePage } from './pages/home'
-import { TestingPage } from './pages/TestingPage'
-import { CabinetPage } from './pages/cabinet'
-import { InternetSecurity } from './pages/TestingPage/internetSecurity'
-import { InformationControl } from './pages/TestingPage/informationControl'
-import { IdentityManagement } from './pages/TestingPage/identityManagement'
-import { DigitalCommunication } from './pages/TestingPage/digitalCommunication'
-import { DigitalEtiquette } from './pages/TestingPage/digitalEtiquette'
-import { DevelopDigitalContent } from './pages/TestingPage/developDigitalContent'
-import { TeacherDigitalTechs } from './pages/TestingPage/teacherDigitalTechs'
+import { InternetSecurity } from './pages/testing/internetSecurity'
+import { InformationControl } from './pages/testing/informationControl'
+import { IdentityManagement } from './pages/testing/identityManagement'
+import { DigitalCommunication } from './pages/testing/digitalCommunication'
+import { DigitalEtiquette } from './pages/testing/digitalEtiquette'
+import { DevelopDigitalContent } from './pages/testing/developDigitalContent'
+import { TeacherDigitalTechs } from './pages/testing/teacherDigitalTechs'
+import { authRoutes, publicRoutes } from './routes'
+import { Context } from './index'
+import Header from './components/Header'
 
 function App() {
+  const { user } = useContext(Context)
+
   return (
     <HashRouter>
+      <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path='/cabinet' element={<CabinetPage />} />
-        <Route path='/testing' element={<TestingPage />} />
-        <Route path='/testing/internet-security' element={<InternetSecurity />} />
-        <Route path='/testing/information-control' element={<InformationControl />} />
-        <Route path='/testing/identity-management' element={<IdentityManagement />} />
-        <Route path='/testing/digital-communication' element={<DigitalCommunication />} />
-        <Route path='/testing/digital-etiquette' element={<DigitalEtiquette />} />
-        <Route path='/testing/develop-digital-content' element={<DevelopDigitalContent />} />
-        <Route path='/testing/teacher-digital-techs' element={<TeacherDigitalTechs />} />
+        {user.isAuth && authRoutes.map(({ path, Page }) =>
+          <Route key={path} path={path} element={<Page />} exact />
+        )}
+        {publicRoutes.map(({ path, Page }) =>
+          <Route key={path} path={path} element={<Page />} exact />
+        )}
+        {/*
+      <Route path='/testing/internet-security' element={<InternetSecurity />} />
+      <Route path='/testing/information-control' element={<InformationControl />} />
+      <Route path='/testing/identity-management' element={<IdentityManagement />} />
+      <Route path='/testing/digital-communication' element={<DigitalCommunication />} />
+      <Route path='/testing/digital-etiquette' element={<DigitalEtiquette />} />
+      <Route path='/testing/develop-digital-content' element={<DevelopDigitalContent />} />
+      <Route path='/testing/teacher-digital-techs' element={<TeacherDigitalTechs />} />*/}
       </Routes>
     </HashRouter>
   )

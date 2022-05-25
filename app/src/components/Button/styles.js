@@ -2,6 +2,7 @@ import { css } from '@linaria/core'
 import { colors } from '../../assets/constants'
 
 export const button = css`
+  width: auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
