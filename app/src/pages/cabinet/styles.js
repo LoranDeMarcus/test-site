@@ -2,7 +2,7 @@ import { styled } from '@linaria/react'
 import { css } from '@linaria/core'
 import { colors } from '../../assets/constants'
 
-export const Wrapper = styled.div`
+export const AuthWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;

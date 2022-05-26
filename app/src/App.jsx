@@ -10,9 +10,11 @@ import { TeacherDigitalTechs } from './pages/testing/teacherDigitalTechs'
 import { authRoutes, publicRoutes } from './routes'
 import { Context } from './index'
 import Header from './components/Header'
+import { observer } from 'mobx-react-lite'
 
-function App() {
+const App = observer(() => {
   const { user } = useContext(Context)
+
 
   return (
     <HashRouter>
@@ -35,6 +37,6 @@ function App() {
       </Routes>
     </HashRouter>
   )
-}
+})
 
 export default App
