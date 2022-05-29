@@ -1,10 +1,17 @@
 import React from 'react'
-import { button } from './styles'
+import { GhostButton, PrimaryButton } from './styles'
 
-export const Button = ({ type='button', onClick, children }) => {
+export const Button = ({ type='button', onClick, children, ghost }) => {
+  if (ghost) {
+    return (
+      <GhostButton type={type} onClick={onClick}>
+        {children}
+      </GhostButton>
+  )}
+
   return (
-    <button className={button} type={type} onClick={onClick}>
+    <PrimaryButton type={type} onClick={onClick}>
       {children}
-    </button>
+    </PrimaryButton>
   )
 }

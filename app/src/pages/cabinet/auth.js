@@ -1,35 +1,43 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import Container from '../../components/Container'
 import * as s from './styles'
 import { Controller, useForm } from 'react-hook-form'
-import { form, Link_active } from './styles'
+import { form } from './styles'
 import { Input } from '../../components/Input'
 import { Button } from '../../components/Button'
-import { NavLink, useLocation } from 'react-router-dom'
-import { LOGIN_ROUTE, REGISTRATION_ROUTE } from '../../utils/consts'
 import { login, registration } from '../../api/userAPI'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import { Context } from '../../index'
 import { observer } from 'mobx-react-lite'
+import { useNavigate } from "react-router-dom"
+
+const requiredFieldText = 'Обязательное поле'
 
 const validationSchema = yup.object({
-  email: yup.string().required('Введите логин'),
-  password: yup.string().required('Введите пароль'),
-  name: yup.string().required('Введите имя'),
-  lastName: yup.string().required('Введите фамилию'),
-  middleName: yup.string().required('Введите отчество'),
+  email: yup.string().required(requiredFieldText),
+  password: yup.string().required(requiredFieldText),
+  name: yup.string().required(requiredFieldText),
+  lastName: yup.string().required(requiredFieldText),
+  middleName: yup.string().required(requiredFieldText),
   birthDate: yup.string().optional(),
-  department: yup.string().required('Введите факультет'),
+  department: yup.string().required(requiredFieldText),
   cathedra: yup.string().optional(),
 })
 
-export const Auth = observer(() => {
-  const { user } = useContext(Context)
-  const isLogin = false
+const loginValidationSchema = yup.object({
+  email: yup.string().required(requiredFieldText),
+  password: yup.string().required(requiredFieldText),
+})
 
-  const { control, handleSubmit, formState: { errors } } = useForm({
-    resolver: yupResolver(validationSchema),
+export const Auth = observer(() => {
+  const [isLogin, setIsLogin] = useState(false)
+  const { user } = useContext(Context)
+
+  const navigate = useNavigate()
+
+  const { control, reset, handleSubmit, formState: { errors } } = useForm({
+    resolver: yupResolver(isLogin ? loginValidationSchema : validationSchema),
     defaultValues: {
       email: '',
       password: '',
@@ -42,16 +50,22 @@ export const Auth = observer(() => {
     }
   })
 
+  const handleLogin = () => {
+    reset()
+    setIsLogin(!isLogin)
+  }
+
   const onSubmit = async (formData) => {
     try {
       let data
       if (isLogin) {
-        data = await login()
+        data = await login(formData)
       } else {
         data = await registration(formData)
       }
       user.setUser(data)
       user.setAuth(true)
+      navigate(0)
     } catch (err) {
       alert(err.response.data.message)
     }
@@ -87,91 +101,92 @@ export const Auth = observer(() => {
               />
             )}
           />
-          <Controller
-            name='name'
-            control={control}
-            render={({ field: { onChange, value } }) => (
-              <Input
-                label='Имя'
-                onChange={onChange}
-                value={value}
-                errorMessage={errors?.name?.message}
+          {!isLogin && (
+            <>
+              <Controller
+                name='name'
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <Input
+                    label='Имя'
+                    onChange={onChange}
+                    value={value}
+                    errorMessage={errors?.name?.message}
+                  />
+                )}
               />
-            )}
-          />
-          <Controller
-            name='lastName'
-            control={control}
-            render={({ field: { onChange, value } }) => (
-              <Input
-                label='Фамилия'
-                onChange={onChange}
-                value={value}
-                errorMessage={errors?.lastName?.message}
+              <Controller
+                name='lastName'
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <Input
+                    label='Фамилия'
+                    onChange={onChange}
+                    value={value}
+                    errorMessage={errors?.lastName?.message}
+                  />
+                )}
               />
-            )}
-          />
-          <Controller
-            name='middleName'
-            control={control}
-            render={({ field: { onChange, value } }) => (
-              <Input
-                label='Отчество'
-                onChange={onChange}
-                value={value}
-                errorMessage={errors?.middleName?.message}
+              <Controller
+                name='middleName'
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <Input
+                    label='Отчество'
+                    onChange={onChange}
+                    value={value}
+                    errorMessage={errors?.middleName?.message}
+                  />
+                )}
               />
-            )}
-          />
-          <Controller
-            name='birthDate'
-            control={control}
-            render={({ field: { onChange, value } }) => (
-              <Input
-                label='Дата рождения'
-                onChange={onChange}
-                value={value}
-                errorMessage={errors?.birthDate?.message}
+              <Controller
+                name='birthDate'
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <Input
+                    label='Дата рождения'
+                    onChange={onChange}
+                    value={value}
+                    errorMessage={errors?.birthDate?.message}
+                  />
+                )}
               />
-            )}
-          />
-          <Controller
-            name='department'
-            control={control}
-            render={({ field: { onChange, value } }) => (
-              <Input
-                label='Факультет'
-                onChange={onChange}
-                value={value}
-                errorMessage={errors?.department?.message}
+              <Controller
+                name='department'
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <Input
+                    label='Факультет'
+                    onChange={onChange}
+                    value={value}
+                    errorMessage={errors?.department?.message}
+                  />
+                )}
               />
-            )}
-          />
-          <Controller
-            name='cathedra'
-            control={control}
-            render={({ field: { onChange, value } }) => (
-              <Input
-                label='Кафедра'
-                onChange={onChange}
-                value={value}
-                errorMessage={errors?.cathedra?.message}
+              <Controller
+                name='cathedra'
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <Input
+                    label='Кафедра'
+                    onChange={onChange}
+                    value={value}
+                    errorMessage={errors?.cathedra?.message}
+                  />
+                )}
               />
-            )}
-          />
+            </>
+          )}
           <s.ButtonWrapper>
-            <s.Registration>
+            <div>
               {isLogin
-                ? <>Нет аккаунта? <NavLink to={REGISTRATION_ROUTE} className={Link_active}>Зарегистрироваться</NavLink></>
-                : <>Есть аккаунта? <NavLink to={LOGIN_ROUTE} className={Link_active}>Войти</NavLink></>
+                ? <>Нет аккаунта? <Button onClick={handleLogin} ghost>Зарегистрироваться</Button></>
+                : <>Есть аккаунта? <Button onClick={handleLogin} ghost>Войти</Button></>
               }
 
-            </s.Registration>
+            </div>
             <Button type='submit'>
-              {isLogin
-                ? 'Войти'
-                : 'Регистрация'
-              }
+              {isLogin ? 'Войти' : 'Регистрация'}
             </Button>
           </s.ButtonWrapper>
         </form>

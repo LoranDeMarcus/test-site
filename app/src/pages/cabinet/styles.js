@@ -30,16 +30,7 @@ export const ButtonWrapper = styled.div`
   align-items: center;
 `
 
-export const Registration = styled.span`
-  
-`
-
-export const Link_active = css`
-  color: ${colors.blue};
-  text-decoration: none;
-  transition: all 0.3s ease;
-  
-  &:hover {
-    color: ${colors.dark}
-  }
+export const ChartWrapper = styled.div`
+  margin: 80px auto 0;
+  width: 85%;
 `

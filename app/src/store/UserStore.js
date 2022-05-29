@@ -8,7 +8,13 @@ export default class UserStore {
   }
 
   setAuth(bool) {
-    this._isAuth = bool
+    const isAuth = localStorage.getItem('isAuth')
+    if (isAuth || isAuth === bool) {
+      this._isAuth = isAuth
+    } else {
+      this._isAuth = bool
+      localStorage.setItem('isAuth', bool)
+    }
   }
 
   setUser(user) {

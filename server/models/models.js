@@ -9,7 +9,9 @@ const User = sequelize.define('user', {
   name: { type: DataTypes.STRING, allowNull: false },
   lastName: { type: DataTypes.STRING, allowNull: false },
   middleName: { type: DataTypes.STRING, allowNull: false },
+  birthDate: { type: DataTypes.STRING, allowNull: true },
   department: { type: DataTypes.STRING, allowNull: false },
+  cathedra: { type: DataTypes.STRING, allowNull: true },
   role: { type: DataTypes.STRING, defaultValue: 'user' }
 })
 
