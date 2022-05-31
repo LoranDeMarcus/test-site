@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   position: relative;
 
   &[data-empty='true'] input + label {
-    transform: translate(14px, 8px) scale(0.57);
+    transform: translate(14px, 6px) scale(0.57);
     opacity: 1;
   }
 `
@@ -59,7 +59,7 @@ export const Label = styled.label`
   transform: translate(14px, 16px) scale(1);
 
   &[data-focus='true'] {
-    transform: translate(14px, 8px) scale(0.57);
+    transform: translate(14px, 6px) scale(0.57);
     opacity: 0.4;
   }
   

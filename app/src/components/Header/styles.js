@@ -4,7 +4,7 @@ import { colors } from '../../assets/constants'
 
 export const Header = styled.header`
   height: 80px;
-  border-bottom: 1px solid ${colors.gray};
+  border-bottom: 1px solid ${colors.darkGray};
 `
 
 export const Inner = styled.div`
@@ -90,4 +90,18 @@ export const Login = css`
   &:hover {
     color: ${colors.black};
   }
+`
+
+export const IconWrapper = styled.div`
+  flex-shrink: 0;
+  min-width: 45px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid ${colors.darkGray};
+  border-radius: 50%;
+  background-color: ${colors.white};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 `

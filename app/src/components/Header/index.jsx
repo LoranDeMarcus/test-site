@@ -4,6 +4,7 @@ import Container from '../Container'
 import logo from '../../assets/logo.png'
 import { button } from '../Button/styles'
 import * as s from './styles'
+import { ReactComponent as Person } from '../../assets/person.svg'
 
 const Header = () => {
   return (
@@ -44,6 +45,9 @@ const Header = () => {
                 </NavLink>
               </li>
             </s.NavList>
+            {/*<s.IconWrapper>
+              <Person />
+            </s.IconWrapper>*/}
           </s.Navbar>
         </s.Inner>
       </Container>
