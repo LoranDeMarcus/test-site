@@ -2,6 +2,7 @@ import React from 'react'
 import Container from '../../components/Container'
 import * as s from './styles'
 import Hero from '../../assets/hero.jpg'
+import { NavLink } from 'react-router-dom'
 
 export const Home = () => {
   return (
@@ -26,40 +27,50 @@ export const Home = () => {
           <s.TitleTwo>
             Компоненты диагностики цифровых компетенций сотрудников
           </s.TitleTwo>
-          <s.ParagraphWrapper>
-            <s.Paragraph>
-              <s.Point>1.</s.Point> «Безопасность в сети интернет»: знать и соблюдать принципы безопасной работы с компьютерными
-              программами, информацией в сети интернет, знать о интернет-рисках и угрозах в информационном пространстве,
-              уметь анализировать и критически относиться к информации в информационно-коммуникационных сетях
-            </s.Paragraph>
-            <s.Paragraph>
-              <s.Point>2.</s.Point> «Управление информацией и данными»: знать понятие цифровых данных,
-              основные типы структур данных, способы совместного использования цифровых данных
-            </s.Paragraph>
-            <s.Paragraph>
-              <s.Point>3.</s.Point> «Управление цифровой идентичностью»: создавать и управлять одной или
-              несколькими цифровыми идентичностями, иметь возможность защитить свою репутацию
-            </s.Paragraph>
-            <s.Paragraph>
-              <s.Point>4.</s.Point> «Коммуникация в цифровой среде»: взаимодействовать посредством различных
-              цифровых технологий и определять соответствующие цифровые средства коммуникации в контексте
-            </s.Paragraph>
-            <s.Paragraph>
-              <s.Point>5.</s.Point> «Цифровой этикет»: знать правила и нормы поведения в цифровых средах,
-              адаптировать коммуникационные стратегии к конкретной аудитории, понимать и учитывать культурное
-              и поколенческое разнообразие в цифровой среде
-            </s.Paragraph>
-            <s.Paragraph>
-              <s.Point>6.</s.Point> «Разработка и реализация цифрового образовательного контента»:
-              создавать и редактировать цифровой контент в разных форматах, модифицировать и повышать качество
-              информации и контента, интегрировать их в единую совокупность знаний для создания нового контента
-            </s.Paragraph>
-            <s.Paragraph>
-              <s.Point>7.</s.Point> «Использование сквозных цифровых технологий в деятельности педагога»:
-              понимать, какие цифровые компетенции необходимо развивать, искать возможности для саморазвития
-              в цифровой среде, использовать цифровые инструменты и технологии для создания знаний и инноваций
-            </s.Paragraph>
-          </s.ParagraphWrapper>
+          <s.ListWrapper>
+            <s.ListItem>
+              <NavLink to="/testing/internet-security" className={s.Link}>
+                <s.Point>1</s.Point>
+                <s.Caption>Безопасность в сети интернет</s.Caption>
+              </NavLink>
+            </s.ListItem>
+            <s.ListItem>
+              <NavLink to="/testing/information-control" className={s.Link}>
+                <s.Point>2</s.Point>
+                <s.Caption>Управление информацией и данными</s.Caption>
+              </NavLink>
+            </s.ListItem>
+            <s.ListItem>
+              <NavLink to="/testing/identity-management" className={s.Link}>
+                <s.Point>3</s.Point>
+                <s.Caption>Управление цифровой идентичностью</s.Caption>
+              </NavLink>
+            </s.ListItem>
+            <s.ListItem>
+              <NavLink to="/testing/digital-communication" className={s.Link}>
+                <s.Point>4</s.Point>
+                <s.Caption>Коммуникация в цифровой среде</s.Caption>
+              </NavLink>
+            </s.ListItem>
+            <s.ListItem>
+              <NavLink to="/testing/digital-etiquette" className={s.Link}>
+                <s.Point>5</s.Point>
+                <s.Caption>Цифровой этикет</s.Caption>
+              </NavLink>
+            </s.ListItem>
+            <s.ListItem>
+              <NavLink to="/testing/develop-digital-content" className={s.Link}>
+                <s.Point>6</s.Point>
+                <s.Caption>Разработка и реализация цифрового образовательного контента</s.Caption>
+              </NavLink>
+            </s.ListItem>
+            <s.ListItem>
+              <NavLink to="/testing/teacher-digital-techs" className={s.Link}>
+                <s.Point>7</s.Point>
+                <s.Caption>Использование сквозных цифровых технологий в деятельности педагога</s.Caption>
+              </NavLink>
+            </s.ListItem>
+          </s.ListWrapper>
         </Container>
       </s.ColoredSection>
       <s.TransparentSection>

@@ -43,7 +43,7 @@ export const ColoredSection = styled.section`
 `
 
 export const TitleTwo = styled.h2`
-  margin-bottom: 25px;
+  margin-bottom: 45px;
   padding-bottom: 20px;
   font-size: 30px;
   line-height: 44px;
@@ -52,29 +52,42 @@ export const TitleTwo = styled.h2`
   border-bottom: 1px solid ${colors.white};
 `
 
-export const ParagraphWrapper = styled.div`
+export const ListWrapper = styled.ul`
+  padding-left: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: row;
+  gap: 35px;
+  list-style: none;
 `
 
-export const Paragraph = styled.p`
-  width: 49%;
-  margin-bottom: 15px;
-  display: block;
-  border: 1px solid ${colors.white};
-  border-radius: 6px;
-  padding: 30px;
+export const ListItem = styled.li`
+  width: 340px;
   font-size: 18px;
-  line-height: 27px;
+  line-height: 22px;
   font-weight: 400;
-  
-  &:last-child {
-    margin: 10px auto;
-  }
+  list-style: none;
+`
+
+export const Link = css`
+  display: flex;
+  align-items: flex-start;
+  text-decoration: none;
+  color: ${colors.white};
 `
 
 export const Point = styled.span`
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  background-color: ${colors.lightBlue};
   margin-right: 15px;
   font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+export const Caption = styled.span`
+  padding-top: 4px;
 `
