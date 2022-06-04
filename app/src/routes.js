@@ -8,7 +8,6 @@ import {
 } from './utils/consts'
 import { Cabinet } from './pages/cabinet'
 import { Testing } from './pages/testing'
-import { Admin } from './pages/admin'
 import { Home } from './pages/home'
 import { InternetSecurity } from './pages/testing/internetSecurity'
 import { InformationControl } from './pages/testing/informationControl'
@@ -17,13 +16,6 @@ import { DigitalEtiquette } from './pages/testing/digitalEtiquette'
 import { DigitalCommunication } from './pages/testing/digitalCommunication'
 import { DevelopDigitalContent } from './pages/testing/developDigitalContent'
 import { TeacherDigitalTechs } from './pages/testing/teacherDigitalTechs'
-
-export const authRoutes = [
-  {
-    path: ADMIN_ROUTE,
-    Page: Admin
-  }
-]
 
 export const publicRoutes = [
   {

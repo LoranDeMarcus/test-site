@@ -23,6 +23,11 @@
     "react-use-cookie": "^1.4.0",
     "yup": "^0.32.11"
   },
+  "devDependencies": {
+    "@linaria/webpack-loader": "^3.0.0-beta.16",
+    "customize-cra": "^1.0.0",
+    "react-app-rewired": "^2.2.1"
+  },
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
@@ -46,9 +51,4 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@linaria/webpack-loader": "^3.0.0-beta.16",
-    "customize-cra": "^1.0.0",
-    "react-app-rewired": "^2.2.1"
-  }
 }
