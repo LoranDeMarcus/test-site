@@ -87,12 +87,53 @@ export const Cabinet = () => {
     },
   };
 
-  if (!isAuth) {
-    return <Auth />
-  }
+  // if (!isAuth) {
+  //   return <Auth />
+  // }
 
   return (
     <Container>
+      <s.Table>
+        <s.Thead>
+          <tr>
+            <s.Td colSpan="2">Фамилия Имя Отчество</s.Td>
+          </tr>
+        </s.Thead>
+        <tbody>
+        <tr>
+          <s.Td>Название теста:</s.Td>
+          <s.Td>Результат:</s.Td>
+        </tr>
+        <tr>
+          <s.Td>Безопасность в сети интернет</s.Td>
+          <s.Td>0</s.Td>
+        </tr>
+        <tr>
+          <s.Td>Управление информацией и данными</s.Td>
+          <s.Td>0</s.Td>
+        </tr>
+        <tr>
+          <s.Td>Управление цифровой идентичностью</s.Td>
+          <s.Td>0</s.Td>
+        </tr>
+        <tr>
+          <s.Td>Коммуникация в цифровой среде</s.Td>
+          <s.Td>0</s.Td>
+        </tr>
+        <tr>
+          <s.Td>Цифровой этикет</s.Td>
+          <s.Td>0</s.Td>
+        </tr>
+        <tr>
+          <s.Td>Разработка и реализация цифрового образовательного контента</s.Td>
+          <s.Td>0</s.Td>
+        </tr>
+        <tr>
+          <s.Td>Использование сквозных цифровых технологий в деятельности педагога</s.Td>
+          <s.Td>0</s.Td>
+        </tr>
+        </tbody>
+      </s.Table>
       <s.ChartWrapper>
         <Radar type='radar' data={data} options={options} />
       </s.ChartWrapper>

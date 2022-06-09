@@ -1,16 +1,20 @@
 import React from 'react'
-import { List, Datagrid, TextField, EditButton, DeleteButton } from 'react-admin'
+import { Datagrid, DeleteButton, EditButton, List, TextField } from 'react-admin'
 
 const QuestionList = (props) => {
   return (
     <List {...props}>
-        <Datagrid>
-          <TextField source='id' />
-          <TextField source='title' />
-          <TextField source='body' />
-          <EditButton basepath='/questions' />
-          <DeleteButton basepath='questions' />
-        </Datagrid>
+      <Datagrid>
+        <TextField source="id" />
+        <TextField source="Вопрос" />
+        <TextField source="Ответ 1" />
+        <TextField source="Ответ 2" />
+        <TextField source="Ответ 3" />
+        <TextField source="Ответ 4" />
+        <TextField source="Правильный ответ" />
+        <EditButton basepath="/questions" />
+        <DeleteButton basepath="questions" />
+      </Datagrid>
     </List>
   )
 }

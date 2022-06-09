@@ -7,7 +7,7 @@ import QuestionEdit from './components/QuestionEdit/QuestionEdit'
 
 function App() {
   return (
-    <Admin dataProvider={restProvider('http://localhost:3000')}>
+    <Admin /*dataProvider={restProvider('http://localhost:3000')}*/>
       <Resource name='questions' list={QuestionList} create={QuestionCreate} edit={QuestionEdit} />
     </Admin>
   )

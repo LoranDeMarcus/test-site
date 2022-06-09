@@ -30,6 +30,36 @@ export const ButtonWrapper = styled.div`
   align-items: center;
 `
 
+export const Table = styled.table`
+  margin: 80px auto 0;
+  width: 100%;
+  border-collapse:collapse;
+  border-spacing:0;
+  border: 1px solid #595959;
+`
+
+export const Thead = styled.thead`
+  border: 2px solid ${colors.dark};
+`
+
+export const Td = styled.td`
+  border: 1px solid ${colors.dark};
+  border-bottom: none;
+  padding: 15px;
+  width: 30px;
+  height: 35px;
+`
+
+export const Th = styled.th`
+  border: 1px solid ${colors.dark};
+  padding: 3px;
+  width: 30px;
+  height: 35px;
+  background: #347c99;
+  color: #fff;
+  font-weight: normal;
+`
+
 export const ChartWrapper = styled.div`
   margin: 80px auto 0;
   width: 85%;
