@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   position: relative;
 
   &[data-empty='true'] input + label {
-    transform: translate(14px, 6px) scale(0.57);
+    transform: translate(13px, 3px) scale(0.57);
     opacity: 1;
   }
 `
@@ -13,9 +13,9 @@ export const Wrapper = styled.div`
 export const Input = styled.input`
   border: 1px solid ${colors.blue};
   border-radius: 4px;
-  height: 56px;
-  padding: 10px 40px 10px 12px;
-  font-size: 20px;
+  height: 40px;
+  padding: 10px 30px 10px 12px;
+  font-size: 16px;
   min-width: 256px;
   width: 100%;
   overflow: hidden;
@@ -46,7 +46,7 @@ export const Input = styled.input`
 
 export const Label = styled.label`
   font-family: 'SB Sans Interface';
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   opacity: 0.8;
   color: #828ea5;
@@ -56,10 +56,10 @@ export const Label = styled.label`
   z-index: 4;
   transition: all 0.13s linear;
   transform-origin: top left;
-  transform: translate(14px, 16px) scale(1);
+  transform: translate(13px, 10px) scale(1);
 
   &[data-focus='true'] {
-    transform: translate(14px, 6px) scale(0.57);
+    transform: translate(13px, 3px) scale(0.57);
     opacity: 0.4;
   }
   

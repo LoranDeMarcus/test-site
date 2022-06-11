@@ -3,14 +3,14 @@ import { css } from '@linaria/core'
 import { colors } from '../../assets/constants'
 
 export const AuthWrapper = styled.div`
+  margin-top: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 80px);
 `
 
 export const Title = styled.h2`
-  margin: 0 0 30px;
+  margin: 0 0 20px;
   text-align: center;
 `
 
@@ -21,7 +21,7 @@ export const form = css`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 14px;
 `
 
 export const ButtonWrapper = styled.div`

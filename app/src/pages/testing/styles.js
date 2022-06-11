@@ -66,6 +66,10 @@ export const paragraph = css`
     background-color: ${colors.lightBlue};
     box-shadow: 0 0 20px 10px rgba(34, 60, 80, 0.15);
   }
+  
+  & > b {
+    font-weight: 700;
+  }
 `
 
 export const Point = styled.span`
