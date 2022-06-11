@@ -1,12 +1,7 @@
-import {
-  ADMIN_ROUTE,
-  CABINET_ROUTE, DEVELOP_DIGITAL_CONTENT, DIGITAL_COMMUNICATION, DIGITAL_ETIQUETTE,
-  HOME_ROUTE, IDENTITY_MANAGEMENT,
-  INFORMATION_CONTROL,
-  INTERNET_SECURITY, TEACHER_DIGITAL_TECHS,
-  TESTING_ROUTE
-} from './utils/consts'
+import * as route from './utils/consts'
 import { Cabinet } from './pages/cabinet'
+import { Login } from './pages/cabinet/Login'
+import { Registration } from './pages/cabinet/Registration'
 import { Testing } from './pages/testing'
 import { Home } from './pages/home'
 import { InternetSecurity } from './pages/testing/internetSecurity'
@@ -19,43 +14,51 @@ import { TeacherDigitalTechs } from './pages/testing/teacherDigitalTechs'
 
 export const publicRoutes = [
   {
-    path: HOME_ROUTE,
+    path: route.HOME,
     Page: Home
   },
   {
-    path: CABINET_ROUTE,
+    path: route.LOGIN,
+    Page: Login
+  },
+  {
+    path: route.REGISTRATION,
+    Page: Registration
+  },
+  {
+    path: route.CABINET,
     Page: Cabinet
   },
   {
-    path: TESTING_ROUTE,
+    path: route.TESTING,
     Page: Testing
   },
   {
-    path: INTERNET_SECURITY,
+    path: route.INTERNET_SECURITY,
     Page: InternetSecurity
   },
   {
-    path: INFORMATION_CONTROL,
+    path: route.INFORMATION_CONTROL,
     Page: InformationControl
   },
   {
-    path: IDENTITY_MANAGEMENT,
+    path: route.IDENTITY_MANAGEMENT,
     Page: IdentityManagement
   },
   {
-    path: DIGITAL_COMMUNICATION,
+    path: route.DIGITAL_COMMUNICATION,
     Page: DigitalCommunication
   },
   {
-    path: DIGITAL_ETIQUETTE,
+    path: route.DIGITAL_ETIQUETTE,
     Page: DigitalEtiquette
   },
   {
-    path: DEVELOP_DIGITAL_CONTENT,
+    path: route.DEVELOP_DIGITAL_CONTENT,
     Page: DevelopDigitalContent
   },
   {
-    path: TEACHER_DIGITAL_TECHS,
+    path: route.TEACHER_DIGITAL_TECHS,
     Page: TeacherDigitalTechs
   },
 ]

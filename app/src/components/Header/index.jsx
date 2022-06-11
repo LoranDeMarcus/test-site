@@ -4,9 +4,11 @@ import Container from '../Container'
 import logo from '../../assets/logo.png'
 import { button } from '../Button/styles'
 import * as s from './styles'
-import { ReactComponent as Person } from '../../assets/person.svg'
+import { useAuth } from '../../provider/AuthProvider'
 
 const Header = () => {
+  const { logout } = useAuth()
+
   return (
     <s.Header>
       <Container>
@@ -36,6 +38,28 @@ const Header = () => {
                   Оценка
                 </NavLink>
               </li>
+              <li>
+                <NavLink
+                  to='/login'
+                  className={({ isActive }) => isActive
+                    ? s.link_active
+                    : s.link
+                  }
+                >
+                  Вход
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to='/registration'
+                  className={({ isActive }) => isActive
+                    ? s.link_active
+                    : s.link
+                  }
+                >
+                  Регистрация
+                </NavLink>
+              </li>
               <li style={{ marginLeft: '20px' }}>
                 <NavLink
                   to='/cabinet'
@@ -45,9 +69,6 @@ const Header = () => {
                 </NavLink>
               </li>
             </s.NavList>
-            {/*<s.IconWrapper>
-              <Person />
-            </s.IconWrapper>*/}
           </s.Navbar>
         </s.Inner>
       </Container>

@@ -6,12 +6,12 @@ const QuestionList = (props) => {
     <List {...props}>
       <Datagrid>
         <TextField source="id" />
-        <TextField source="Вопрос" />
-        <TextField source="Ответ 1" />
-        <TextField source="Ответ 2" />
-        <TextField source="Ответ 3" />
-        <TextField source="Ответ 4" />
-        <TextField source="Правильный ответ" />
+        <TextField source="Question" />
+        <TextField source="Answer 1" />
+        <TextField source="Answer 2" />
+        <TextField source="Answer 3" />
+        <TextField source="Answer 4" />
+        <TextField source="Right Answer" />
         <EditButton basepath="/questions" />
         <DeleteButton basepath="questions" />
       </Datagrid>

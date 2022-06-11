@@ -1,6 +1,5 @@
 import React from 'react'
 import Container from '../../components/Container'
-import { Auth } from './auth'
 import {
   Chart as ChartJS,
   RadialLinearScale,
@@ -34,8 +33,6 @@ const labels = [
 ]
 
 export const Cabinet = () => {
-  const isAuth = localStorage.getItem('isAuth')
-
   const data = {
     labels,
     datasets: [
@@ -86,10 +83,6 @@ export const Cabinet = () => {
       }
     },
   };
-
-  // if (!isAuth) {
-  //   return <Auth />
-  // }
 
   return (
     <Container>

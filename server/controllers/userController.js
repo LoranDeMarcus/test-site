@@ -39,7 +39,15 @@ class UserController {
       })
     const userResult = UserResult.create({ userId: user.id })
 
-    const token = generateJWT(user.id, user.email, user.role)
+    const token = generateJWT(
+      user.id,
+      user.email,
+      user.role,
+      user.name,
+      user.middleName,
+      user.lastName,
+      user.department
+    )
 
     return res.json({ token })
   }
@@ -58,7 +66,16 @@ class UserController {
       return next(ApiError.internal('Указан неверный пароль'))
     }
 
-    const token = generateJWT(user.id, user.email, user.role)
+    const token = generateJWT(
+      user.id,
+      user.email,
+      user.role,
+      user.name,
+      user.middleName,
+      user.lastName,
+      user.department
+    )
+
     return res.json({ token })
   }
 
