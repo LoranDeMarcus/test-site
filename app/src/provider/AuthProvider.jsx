@@ -35,7 +35,7 @@ const AuthProvider = ({ children }) => {
   }
 
   const logout = () => {
-    setUser(undefined)
+    setUser({})
     removeCookie('token')
   }
 

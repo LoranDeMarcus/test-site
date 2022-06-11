@@ -50,6 +50,7 @@ export const TitleTwo = styled.h2`
   font-weight: 700;
   text-align: center;
   border-bottom: 1px solid ${colors.white};
+  border-bottom-color: ${({ blue }) => blue ? colors.deepBlue : colors.white};
 `
 
 export const ListWrapper = styled.ul`
@@ -90,4 +91,43 @@ export const Point = styled.span`
 
 export const Caption = styled.span`
   padding-top: 4px;
+`
+
+export const StepsWrapper = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+`
+
+export const Step = styled.div`
+  width: 180px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+`
+
+export const Circle = styled.div`
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 6px solid ${colors.deepBlue};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: 700;
+  color: ${colors.red}
+`
+
+export const Hint = styled.span`
+  font-size: 20px;
+  text-align: center;
+  color: ${colors.deepBlue};
+`
+
+export const cert = css`
+  display: block;
+  width: 700px;
+  margin: 0 auto;
 `
