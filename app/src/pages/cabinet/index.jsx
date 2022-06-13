@@ -11,7 +11,7 @@ import {
 } from 'chart.js'
 import { Radar } from 'react-chartjs-2'
 import * as s from './styles'
-import { splitString } from '../../utils/splitString'
+import CabinetImg from '../../assets/cabinet.png'
 
 ChartJS.register(
   RadialLinearScale,
@@ -86,6 +86,7 @@ export const Cabinet = () => {
 
   return (
     <Container>
+      <img alt='cabinet' src={CabinetImg} className={s.image} />
       <s.Table>
         <s.Thead>
           <tr>

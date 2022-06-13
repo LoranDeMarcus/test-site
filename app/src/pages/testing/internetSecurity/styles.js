@@ -21,6 +21,7 @@ export const form = css`
 export const QuestionWrapper = styled.div`
   padding: 30px 0;
   border-bottom: 1px solid ${colors.gray};
+  border-radius: 6px;
 `
 
 export const Question = styled.p`
@@ -45,6 +46,9 @@ export const AnswerWrapper = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 10px;
+  background-color: ${({ isRight }) => isRight
+          ? 'rgba(144, 238, 144, 0.5)'
+          : 'transparent'};
 `
 
 export const Input = styled.input`
@@ -63,4 +67,11 @@ export const ResultWrapper = styled.div`
 export const Result = styled.p`
   font-size: 16px;
   line-height: 22px;
+`
+
+export const Percent = styled.span`
+  display: block;
+  margin: 20px 0 30px;
+  font-size: 18px;
+  font-weight: 700;
 `

@@ -30,6 +30,12 @@ export const ButtonWrapper = styled.div`
   align-items: center;
 `
 
+export const image = css`
+  display: block;
+  margin: 30px auto 0;
+  width: 70%;
+`
+
 export const Table = styled.table`
   margin: 80px auto 0;
   width: 100%;
