@@ -45,7 +45,7 @@ export const Cabinet = () => {
         borderColor: 'rgba(255, 99, 132, 1)',
         borderWidth: 6,
       }
-    ]
+    ],
   }
 
   const options = {
@@ -65,19 +65,26 @@ export const Cabinet = () => {
         min: 0,
         max: 100,
         gridLines: {
-          circular: false
+          circular: false,
         },
         ticks: {
           callback: (value) => {
             return `${value}%`;
           },
         },
+        angleLines: {
+          color: 'rgba(14,103,179,0.53)',
+        },
+        grid: {
+          color: '#005392',
+        },
         pointLabels: {
           maxWidth: 100,
           padding: 10,
           font: {
-            size: 14
+            size: 14,
           },
+          color: '#081828',
           callback(value) {
             return value
           }
