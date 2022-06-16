@@ -41,7 +41,7 @@ export const Table = styled.table`
   width: 100%;
   border-collapse:collapse;
   border-spacing:0;
-  border: 1px solid #595959;
+  border: 2px solid #595959;
 `
 
 export const Thead = styled.thead`
@@ -51,9 +51,20 @@ export const Thead = styled.thead`
 export const Td = styled.td`
   border: 1px solid ${colors.dark};
   border-bottom: none;
-  padding: 15px;
+  padding: 14px;
   width: 30px;
-  height: 35px;
+  
+  &:nth-child(1) {
+    width: 30%;
+  }
+  
+  &:nth-child(2) {
+    width: 10%;
+  }
+  
+  &:last-child {
+    width: 70%;
+  }
 `
 
 export const Th = styled.th`
