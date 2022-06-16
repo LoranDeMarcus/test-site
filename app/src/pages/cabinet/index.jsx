@@ -2,12 +2,12 @@ import React from 'react'
 import Container from '../../components/Container'
 import {
   Chart as ChartJS,
-  RadialLinearScale,
-  PointElement,
-  LineElement,
   Filler,
-  Tooltip,
   Legend,
+  LineElement,
+  PointElement,
+  RadialLinearScale,
+  Tooltip,
 } from 'chart.js'
 import { Radar } from 'react-chartjs-2'
 import * as s from './styles'
@@ -60,6 +60,11 @@ export const Cabinet = () => {
         bottom: 60
       }
     },
+    plugins: {
+      legend: {
+        display: false
+      }
+    },
     scales: {
       r: {
         min: 0,
@@ -69,7 +74,7 @@ export const Cabinet = () => {
         },
         ticks: {
           callback: (value) => {
-            return `${value}%`;
+            return `${value}%`
           },
         },
         angleLines: {
@@ -95,7 +100,7 @@ export const Cabinet = () => {
 
   return (
     <Container>
-      <img alt='cabinet' src={CabinetImg} className={s.image} />
+      <img alt="cabinet" src={CabinetImg} className={s.image} />
       <s.Table>
         <s.Thead>
           <tr>
@@ -176,7 +181,7 @@ export const Cabinet = () => {
         </tbody>
       </s.Table>
       <s.ChartWrapper>
-        <Radar type='radar' data={data} options={options} />
+        <Radar type="radar" data={data} options={options} />
       </s.ChartWrapper>
     </Container>
   )
