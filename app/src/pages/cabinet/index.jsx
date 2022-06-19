@@ -32,6 +32,11 @@ const labels = [
   ['Использование сквозных', 'цифровых технологий', 'в деятельности педагога']
 ]
 
+const resultArr = []
+for (let i = 0; i < 7; i++) {
+  resultArr.push(Math.ceil(Math.random() * 100))
+}
+
 export const Cabinet = () => {
   const resultData = [35, 56, 0, 67, 76, 43, 100]
 
@@ -40,7 +45,7 @@ export const Cabinet = () => {
     datasets: [
       {
         label: '% правильных ответов',
-        data: resultData,
+        data: resultArr,
         backgroundColor: 'transparent',
         borderColor: 'rgba(255, 99, 132, 1)',
         borderWidth: 6,
@@ -61,8 +66,14 @@ export const Cabinet = () => {
       }
     },
     plugins: {
-      legend: {
-        display: false
+      // legend: {
+      //   display: false
+      // }
+      datalabels: {
+        formatter: function (value, context) {
+          console.log(value)
+          return context.chart.data.labels[context.dataIndex]
+        }
       }
     },
     scales: {
@@ -90,8 +101,8 @@ export const Cabinet = () => {
             size: 14,
           },
           color: '#081828',
-          callback(value) {
-            return value
+          callback(value, i) {
+            return [...value, `${resultArr[i]}%`]
           }
         }
       }
